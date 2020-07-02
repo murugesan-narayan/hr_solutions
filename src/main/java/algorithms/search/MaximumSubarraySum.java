@@ -7,12 +7,12 @@ public class MaximumSubarraySum {
         long maxSum=0;
         TreeSet<Long> prefix = new TreeSet<>();
         long currentSum=0;
-        for(int i=0; i<a.length; i++){
-            currentSum = (currentSum + a[i] % m) % m;
-            SortedSet<Long> set = prefix.tailSet(currentSum+1);
+        for (long l : a) {
+            currentSum = (currentSum + l % m) % m;
+            SortedSet<Long> set = prefix.tailSet(currentSum + 1);
             Iterator<Long> itr = set.iterator();
             if (itr.hasNext()) {
-                maxSum= Math.max(maxSum, (currentSum-itr.next()+m)%m);
+                maxSum = Math.max(maxSum, (currentSum - itr.next() + m) % m);
             }
             maxSum = Math.max(maxSum, currentSum);
             prefix.add(currentSum);
@@ -20,7 +20,7 @@ public class MaximumSubarraySum {
         return maxSum;
     }
 
-    static long maximumSum1(long[] a, long m) {
+/*    static long maximumSum1(long[] a, long m) {
         long maxSum = 0;
         OuterLoop:
         // Pick starting point
@@ -41,5 +41,5 @@ public class MaximumSubarraySum {
             }
         }
         return maxSum;
-    }
+    }*/
 }

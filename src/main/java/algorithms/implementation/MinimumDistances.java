@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 public class MinimumDistances {
 
     static int minimumDistances(int[] a) {
-        Map<Integer, List<Integer>> map = new HashMap();
+        Map<Integer, List<Integer>> map = new HashMap<>();
         for (int i = 0; i < a.length; i++) {
             List<Integer> list = map.getOrDefault(a[i], new ArrayList<>());
             list.add(i);

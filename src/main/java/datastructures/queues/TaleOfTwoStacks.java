@@ -1,10 +1,7 @@
 package datastructures.queues;
 
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+
 class MyQueue<T> {
     Stack<T> stack1 = new Stack<>();
     Stack<T> stack2 = new Stack<>();
@@ -49,4 +46,3 @@ public class TaleOfTwoStacks {
         scan.close();
     }
 }
-

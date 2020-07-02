@@ -6,8 +6,7 @@ public class AngryProfessor {
         int onTime = 0;
         for (int t : a)
             if (t <= 0) onTime++;
-        String cancel = onTime < k ? "YES" : "NO";
-        return cancel;
+        return onTime < k ? "YES" : "NO";
     }
 
 }

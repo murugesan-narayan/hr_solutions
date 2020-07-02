@@ -12,4 +12,11 @@ class AppendAndDeleteTest {
         assertEquals("Yes", isConverted);
 
     }
+
+    @Test
+    void appendAndDelete2() {
+        String isConverted = AppendAndDelete.appendAndDelete("hackerhappy1", "hackerrank1", 11);
+        assertEquals("Yes", isConverted);
+
+    }
 }

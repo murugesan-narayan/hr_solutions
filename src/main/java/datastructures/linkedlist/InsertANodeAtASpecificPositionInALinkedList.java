@@ -2,7 +2,7 @@ package datastructures.linkedlist;
 
 public class InsertANodeAtASpecificPositionInALinkedList {
 
-    class Node {
+    /*class Node {
         int data;
         Node next;
     }
@@ -34,10 +34,18 @@ public class InsertANodeAtASpecificPositionInALinkedList {
             }
         }
         return head;
+    }*/
+
+    static class SinglyLinkedListNode {
+        int data;
+        SinglyLinkedListNode next;
+        SinglyLinkedListNode(int data){
+            this.data = data;
+        }
     }
 
     //MyCode
-    /*static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int data, int position) {
+    static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int data, int position) {
         SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
         SinglyLinkedListNode currentNode = head;
         SinglyLinkedListNode previousNode = null;
@@ -55,6 +63,13 @@ public class InsertANodeAtASpecificPositionInALinkedList {
             newNode.next = currentNode;
         }
         return head;
-    }*/
+    }
 
+    public static void main(String[] args) {
+        SinglyLinkedListNode node = new SinglyLinkedListNode(1);
+        SinglyLinkedListNode result = insertNodeAtPosition(node, 2, 1);
+        System.out.println("result = " + result);
+        result = insertNodeAtPosition(node, 3, 2);
+        System.out.println("result = " + result);
+    }
 }

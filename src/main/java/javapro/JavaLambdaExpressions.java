@@ -70,11 +70,11 @@ class MyMath {
 
 public class JavaLambdaExpressions {
     public static void main(String[] args) throws IOException {
-        MyMath ob = new MyMath();
+        //MyMath ob = new MyMath();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int T = Integer.parseInt(br.readLine());
         PerformOperation op;
-        boolean ret = false;
+        boolean ret;
         String ans = null;
         while (T-- > 0) {
             String s = br.readLine().trim();
@@ -82,16 +82,16 @@ public class JavaLambdaExpressions {
             int ch = Integer.parseInt(st.nextToken());
             int num = Integer.parseInt(st.nextToken());
             if (ch == 1) {
-                op = ob.isOdd();
-                ret = ob.checker(op, num);
+                op = MyMath.isOdd();
+                ret = MyMath.checker(op, num);
                 ans = (ret) ? "ODD" : "EVEN";
             } else if (ch == 2) {
-                op = ob.isPrime();
-                ret = ob.checker(op, num);
+                op = MyMath.isPrime();
+                ret = MyMath.checker(op, num);
                 ans = (ret) ? "PRIME" : "COMPOSITE";
             } else if (ch == 3) {
-                op = ob.isPalindrome();
-                ret = ob.checker(op, num);
+                op = MyMath.isPalindrome();
+                ret = MyMath.checker(op, num);
                 ans = (ret) ? "PALINDROME" : "NOT PALINDROME";
 
             }

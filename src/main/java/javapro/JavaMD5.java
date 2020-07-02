@@ -21,12 +21,12 @@ public class JavaMD5 {
     }
 
     private static String getMD5(String s) {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
             byte[] result = md.digest(s.getBytes());
-            for (int i = 0; i < result.length; i++) {
-                String hex = Integer.toHexString(0xff & result[i]);
+            for (byte b : result) {
+                String hex = Integer.toHexString(0xff & b);
                 if (hex.length() == 1)
                     sb.append('0');
                 sb.append(hex);

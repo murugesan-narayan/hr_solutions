@@ -22,7 +22,7 @@ public class MakingAnagrams {
             Integer count2 = map2.get(c);
             if (count2 == null)
                 minCharsDeletion += count1;
-            else if (count1 == count2)
+            else if (count1.equals(count2))
                 map2.remove(c);
             else if (count1 > count2) {
                 minCharsDeletion += count1 - count2;
@@ -30,7 +30,7 @@ public class MakingAnagrams {
             } else
                 map2.put(c, count2 - count1);
         }
-        Integer countB = map2.values().stream().reduce((a, b) -> a + b).orElse(0);
+        Integer countB = map2.values().stream().reduce(Integer::sum).orElse(0);
         minCharsDeletion += countB;
         return minCharsDeletion;
     }
@@ -79,4 +79,3 @@ public class MakingAnagrams {
         scanner.close();
     }*/
 }
-

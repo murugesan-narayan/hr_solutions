@@ -1,7 +1,5 @@
 package algorithms.dynamic.prog;
 
-import java.util.Arrays;
-
 public class MaxArraySum {
 
     static int maxSubsetSum(int[] arr) {

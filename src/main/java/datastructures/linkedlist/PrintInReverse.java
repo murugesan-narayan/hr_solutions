@@ -1,7 +1,7 @@
 package datastructures.linkedlist;
 
 public class PrintInReverse {
-    class Node {
+/*    class Node {
         int data;
         Node next;
     }
@@ -11,15 +11,24 @@ public class PrintInReverse {
             ReversePrint(head.next);
             System.out.println(head.data);
         }
+    }*/
+    static class SinglyLinkedListNode {
+        int data;
+        SinglyLinkedListNode next;
     }
 
     //MyCode
-    /*static void reversePrint(SinglyLinkedListNode head) {
-        if(head != null) {
+    static void reversePrint(SinglyLinkedListNode head) {
+        if (head != null) {
             reversePrint(head.next);
             System.out.println(head.data);
         }
+    }
 
-    }*/
+    public static void main(String[] args) {
+        SinglyLinkedListNode node = new SinglyLinkedListNode();
+        node.data = 1;
+        reversePrint(node);
+    }
 
 }

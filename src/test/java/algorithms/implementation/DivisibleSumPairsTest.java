@@ -14,4 +14,13 @@ class DivisibleSumPairsTest {
         );
         assertEquals(5, pairs);
     }
+
+    @Test
+    void divisibleSumPairs2() {
+        int pairs = DivisibleSumPairs.divisibleSumPairs(
+                7, 5,
+                new int[]{1, 3, 2, 6, 1, 2, 2}
+        );
+        assertEquals(3, pairs);
+    }
 }

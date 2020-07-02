@@ -2,7 +2,6 @@ package datastructures.arrays;
 
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 public class LeftRotation {
 
@@ -24,12 +23,12 @@ public class LeftRotation {
         Scanner sc = new Scanner(System.in);
         int arraySize = sc.nextInt();
         int d = sc.nextInt();
-        int a[] = new int[arraySize];
+        int[] a = new int[arraySize];
         for (int i = 0; i < a.length; i++) {
             a[i] = sc.nextInt();
         }
 
-        int res[] = rotLeft(a, d);
+        int[] res = rotLeft(a, d);
         System.out.println(Arrays.toString(res));
         sc.close();
     }

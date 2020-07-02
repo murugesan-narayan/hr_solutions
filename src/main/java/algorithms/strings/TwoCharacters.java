@@ -1,12 +1,7 @@
 package algorithms.strings;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 public class TwoCharacters {
 
@@ -15,11 +10,11 @@ public class TwoCharacters {
         for (int i = 0; i < s.length(); i++) {
             set.add(s.charAt(i));
         }
-        Character[] chars = set.toArray(new Character[set.size()]);
+        Character[] chars = set.toArray(new Character[0]);
         int maxLen = 0;
         for (int i = 0; i < chars.length-1; i++) {
             for (int j = i + 1; j < chars.length; j++) {
-                String pattern = "[^"+chars[i]+chars[j]+"]";
+                String pattern = String.format("[^%s%s]", chars[i], chars[j]);
                 String rem = s.replaceAll(pattern, "");
                 if (rem.length() < maxLen) continue;
                 if (isTwoCharacter(rem)) maxLen = rem.length();
@@ -34,7 +29,7 @@ public class TwoCharacters {
         return true;
     }
 
-    static int alternate1(String s) {
+/*    static int alternate1(String s) {
         Set<Character> char_set = new HashSet<>();
 
         for (int i = 0; i < s.length(); i++) {
@@ -63,5 +58,5 @@ public class TwoCharacters {
             }
         }
         return true;
-    }
+    }*/
 }

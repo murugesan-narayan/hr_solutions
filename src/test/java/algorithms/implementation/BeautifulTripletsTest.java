@@ -12,4 +12,11 @@ class BeautifulTripletsTest {
                 new int[]{1, 2, 4, 5, 7, 8, 10});
         assertEquals(3, beautifulTriplets);
     }
+
+    @Test
+    void beautifulTriplets3() {
+        int beautifulTriplets = BeautifulTriplets.beautifulTriplets(2,
+                new int[]{1, 2, 4, 5, 7, 8, 10});
+        assertEquals(0, beautifulTriplets);
+    }
 }

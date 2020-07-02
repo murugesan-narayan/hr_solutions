@@ -6,9 +6,9 @@ public class DecimalFormatTest {
     public static void main(String[] args) {
         int[] arr = new int[]{-4,3,-9,0,4,1};
         double pc = 0, nc = 0, zc = 0;
-        for (int i=0; i<arr.length; i++) {
-            if (arr[i] < 0) nc++;
-            else if (arr[i] > 0) pc++;
+        for (int value : arr) {
+            if (value < 0) nc++;
+            else if (value > 0) pc++;
             else zc++;
         }
         DecimalFormat df = new DecimalFormat("0.000000");

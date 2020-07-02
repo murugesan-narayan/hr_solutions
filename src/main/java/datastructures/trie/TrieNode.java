@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class TrieNode {
     private final Map<Character, TrieNode> children = new HashMap<>();
-    private boolean isEndOfWord;
+    //private boolean isEndOfWord;
     private int size = 0;
 
     public int getSize() {
@@ -20,11 +20,11 @@ public class TrieNode {
         return children;
     }
 
-    public boolean isEndOfWord() {
+    /*public boolean isEndOfWord() {
         return isEndOfWord;
-    }
+    }*/
 
-    public void setEndOfWord(boolean endOfWord) {
+    /*public void setEndOfWord(boolean endOfWord) {
         isEndOfWord = endOfWord;
-    }
+    }*/
 }

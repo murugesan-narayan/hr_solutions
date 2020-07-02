@@ -1,9 +1,7 @@
 package datastructures.trees;
 
 import java.util.*;
-import java.io.*;
-
-
+//import java.io.*;
 
 public class LowestCommonAncesstor {
     static class Node {
@@ -61,6 +59,6 @@ public class LowestCommonAncesstor {
         int v2 = scan.nextInt();
         scan.close();
         Node ans = lca(root,v1,v2);
-        System.out.println(ans.data);
+        System.out.println(ans);
     }
 }

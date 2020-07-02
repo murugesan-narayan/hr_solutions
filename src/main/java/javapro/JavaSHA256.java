@@ -22,12 +22,12 @@ public class JavaSHA256 {
     }
 
     private static String getSHAHEX(String s) {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
             byte[] result = digest.digest(s.getBytes());
-            for (int i = 0; i < result.length; i++) {
-                String hex = Integer.toHexString(0xff & result[i]);
+            for (byte b : result) {
+                String hex = Integer.toHexString(0xff & b);
                 if (hex.length() == 1)
                     sb.append('0');
                 sb.append(hex);

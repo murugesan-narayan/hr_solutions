@@ -10,7 +10,7 @@ public class RunningTimeOfQuickSort {
         System.out.println(insertShifts - shifts);
     }
 
-    static void sort(int arr[], int low, int high) {
+    static void sort(int[] arr, int low, int high) {
         if (low < high) {
             /* pi is partitioning index, arr[pi] is
               now at right place */
@@ -23,7 +23,7 @@ public class RunningTimeOfQuickSort {
         }
     }
 
-    static int partition1(int arr[], int low, int high) {
+    static int partition1(int[] arr, int low, int high) {
         int pivot = arr[high];
         int i = (low-1); // index of smaller element
         for (int j=low; j<high; j++) {
@@ -48,12 +48,12 @@ public class RunningTimeOfQuickSort {
         return i+1;
     }
 
-    static void printArray(int arr[]) {
+/*    static void printArray(int[] arr) {
         int n = arr.length;
         for (int i=0; i<n; ++i)
             System.out.print(arr[i]+" ");
         System.out.println();
-    }
+    }*/
 
     static int getInsertionSortShifts(int[] arr) {
         int shifts = 0;

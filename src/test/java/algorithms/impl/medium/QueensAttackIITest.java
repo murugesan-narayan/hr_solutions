@@ -15,4 +15,14 @@ class QueensAttackIITest {
         );
         assertEquals(9, count);
     }
+
+    @Test
+    void queensAttack1() {
+        int count = QueensAttackII.queensAttack(
+                2, 2,
+                2, 2,
+                new int[][]{ {1,2}, {2,3} }
+        );
+        assertEquals(2, count);
+    }
 }

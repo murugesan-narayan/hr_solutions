@@ -14,7 +14,7 @@ public class LilysHomework {
         Arrays.sort(idxs, (i1, i2) -> arr[i2] - arr[i1]);
         int swaps2 = countSwaps(idxs);
 
-        return swaps1 < swaps2 ? swaps1 : swaps2;
+        return Math.min(swaps1, swaps2);
     }
 
     static int countSwaps(Integer[] idxs) {

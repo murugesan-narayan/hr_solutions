@@ -11,4 +11,10 @@ class BeautifulDaysAtTheMoviesTest {
         int beautifulDays = BeautifulDaysAtTheMovies.beautifulDays(20, 23, 6);
         assertEquals(2, beautifulDays);
     }
+
+    @Test
+    void beautifulDays2() {
+        int beautifulDays = BeautifulDaysAtTheMovies.beautifulDays(2, 3, 7);
+        assertEquals(2, beautifulDays);
+    }
 }

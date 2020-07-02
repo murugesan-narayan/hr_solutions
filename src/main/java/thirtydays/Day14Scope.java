@@ -23,8 +23,11 @@ minNum=elements[i]>minNum?minNum:elements[i];
 maximumDifference=Math.abs(maxNum-minNum);
 }
  */
-static int[] testScores;
-public static void main(String[] args) {
-    double average = Arrays.stream(testScores).average().getAsDouble();
-}
+    static int[] testScores = new int[]{1,2,3};
+
+    public static void main(String[] args) {
+        double average = Arrays.stream(testScores).average().orElse(1);
+        System.out.println("average = " + average);
+    }
+
 }

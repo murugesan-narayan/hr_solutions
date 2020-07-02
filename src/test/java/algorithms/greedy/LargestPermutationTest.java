@@ -24,4 +24,10 @@ class LargestPermutationTest {
                 new int[]{2, 1});
         assertArrayEquals(new int[]{2, 1}, permutation);
     }
+    @Test
+    void largestPermutation3() {
+        int[] permutation = LargestPermutation.largestPermutation(2,
+                new int[]{2, 1});
+        assertArrayEquals(new int[]{2, 1}, permutation);
+    }
 }

@@ -19,7 +19,6 @@ public class ACMICPCTeam {
                     maxWays++;
             }
         }
-        int[] result = new int[]{maxTopics, maxWays};
-        return result;
+        return new int[]{maxTopics, maxWays};
     }
 }

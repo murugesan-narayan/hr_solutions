@@ -1,7 +1,7 @@
 package thirtydays;
 
 public class MyBook extends Book{
-    private int price;
+    private final int price;
     MyBook(String $title,String $author,int $price){
         super($title, $author);
         this.price=$price;
@@ -13,13 +13,18 @@ public class MyBook extends Book{
         System.out.println("Price: "+price);
 
     }
+
+    public static void main(String[] args) {
+        MyBook myBook = new MyBook("title", "author", 5);
+        myBook.display();
+    }
 }
 class Book{
     String title;
     String author;
     /**
-     * @param $title
-     * @param $author
+     * @param $title title
+     * @param $author author
      */
     public Book(String $title, String $author) {
         this.author=$author;

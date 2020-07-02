@@ -1,15 +1,15 @@
 package datastructures.stacks;
 
-import java.io.BufferedReader;
+/*import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.List;*/
 import java.util.Scanner;
 import java.util.Stack;
 
 public class SimpleTextEditor {
-    static class Command {
+/*    static class Command {
         int type;
         String value;
         int length;
@@ -18,19 +18,19 @@ public class SimpleTextEditor {
             this.value = val;
             this.length = len;
         }
-    }
-    public static void main(String[] args) {
+    }*/
+/*    public static void main1(String[] args) {
         StringBuilder str = new StringBuilder("123");
-        str.delete(3-3, 3);
+        str.delete(0, 3);
         System.out.println("str = " + str);
-        Command pc = new Command(1, "",1);
+        //Command pc = new Command(1, "",1);
         
-    }
-    public static void main1(String[] args) {
-        Stack<String> st = new Stack<String>();
+    }*/
+    public static void main(String[] args) {
+        Stack<String> st = new Stack<>();
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        String str = "";
+        String str;
         st.push("");
         sc.nextLine();
         for (int i = 0; i < n; i++) {
@@ -63,7 +63,7 @@ public class SimpleTextEditor {
         sc.close();
     }
 
-    public static void main12(String[] args) throws IOException {
+/*    public static void main12(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
         String outputString = "";
@@ -94,6 +94,6 @@ public class SimpleTextEditor {
             }
         }
         for (Character j : result) System.out.println(j);
-    }
+    }*/
 
 }

@@ -3,7 +3,7 @@ package thirtydays;
 import java.util.Scanner;
 
 public class Day25RunningTimeAndComplexity {
-    static boolean isPrime_T(int n) {
+    /*static boolean isPrime_T(int n) {
         if (n<=1) return false;
         if (n<=3) return true;
         if (n%2 == 0 || n%3 == 0) return false;
@@ -12,7 +12,7 @@ public class Day25RunningTimeAndComplexity {
                 return false;
         }
         return true;
-    }
+    }*/
     static boolean isPrime(int n) {
         /*if (n < 2) {
             return false;

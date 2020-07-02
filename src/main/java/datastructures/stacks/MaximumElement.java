@@ -5,7 +5,7 @@ import java.util.Stack;
 
 public class MaximumElement {
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
@@ -39,9 +39,9 @@ public class MaximumElement {
             }
         }
         sc.close();
-    }
+    }*/
     //MyCode
-    public static void main_(String[] args) {
+    public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
         Scanner scan = new Scanner(System.in);
         int queries = scan.nextInt();
@@ -54,10 +54,10 @@ public class MaximumElement {
                 case 1: int data = scan.nextInt();
                     stack.push(data);
                     int maxSoFar = maxStack.peek();
-                    if (data > maxSoFar) maxStack.push(data);
-                    else maxStack.push(maxSoFar);
+                    maxStack.push(Math.max(data, maxSoFar));
                     break;
-                case 2: stack.pop();
+                case 2: int v = stack.pop();
+                    System.out.println("v = " + v);
                     maxStack.pop();
                     break;
                 case 3: System.out.println(maxStack.peek());

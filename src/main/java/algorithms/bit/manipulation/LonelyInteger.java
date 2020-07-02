@@ -1,10 +1,10 @@
 package algorithms.bit.manipulation;
 
 public class LonelyInteger {
-    static int lonelyinteger(int[] a) {
+    static int lonelyInteger(int[] a) {
         int result = 0;
-        for (int i = 0; i < a.length; i++) {
-            result ^= a[i];
+        for (int value : a) {
+            result ^= value;
         }
         return result;
     }

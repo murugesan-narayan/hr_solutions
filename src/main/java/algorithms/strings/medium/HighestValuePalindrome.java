@@ -31,42 +31,36 @@ public class HighestValuePalindrome {
 
         if(x > k)
             return "-1";
-        else if(x == k)
-            return new String(arr);
-        else{
-            i = 0;
-            j = n-1;
-            while(j>i && x<k){
-                if(s.charAt(i) == s.charAt(j)){
-                    if(x<k-1 && s.charAt(i) != '9'){
-                        arr[i] = (char)(9+(int)'0');
-                        arr[j] = (char)(9+(int)'0');
-                        x = x+2;
-                        i++;
-                        j--;
+        else {
+            if(x == k) {
+                System.out.println("x == k");
+            }
+            else{
+                i = 0;
+                j = n-1;
+                while(j>i && x<k){
+                    if(s.charAt(i) == s.charAt(j)){
+                        if (x<k-1 && s.charAt(i) != '9'){
+                            arr[i] = (char)(9+(int)'0');
+                            arr[j] = (char)(9+(int)'0');
+                            x = x+2;
+                        }
                     }
                     else{
-                        i++;
-                        j--;
+                        if(arr[i] != '9'){
+                            arr[i] = (char)(9+(int)'0');
+                            arr[j] = (char)(9+(int)'0');
+                            x++;
+                        }
                     }
+                    i++;
+                    j--;
                 }
-                else{
-                    if(arr[i] != '9'){
-                        arr[i] = (char)(9+(int)'0');
-                        arr[j] = (char)(9+(int)'0');
-                        x++;
-                        i++;
-                        j--;
-                    }else{
-                        i++;
-                        j--;
-                    }
-                }
-            }
 
-            if(x < k){
-                if(n%2 != 0){
-                    arr[n/2] = (char)(9+(int)'0');
+                if(x < k){
+                    if(n%2 != 0){
+                        arr[n/2] = (char)(9+(int)'0');
+                    }
                 }
             }
             return new String(arr);

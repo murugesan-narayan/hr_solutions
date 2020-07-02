@@ -1,9 +1,6 @@
 package algorithms.impl.medium;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.IntStream;
 
 public class EmasSupercomputer {
@@ -34,9 +31,10 @@ public class EmasSupercomputer {
         return big.stream().anyMatch(small::contains);
     }
 
-    static Map.Entry<String, List<String>> findMax(Map<String, List<String>> plusMap) {
-        return plusMap.entrySet().stream().max(Comparator.comparingInt(e -> e.getValue().size())).get();
-    }
+/*    static Map.Entry<String, List<String>> findMax(Map<String, List<String>> plusMap) {
+        return plusMap.entrySet().stream().max(Comparator.comparingInt(e -> e.getValue().size()))
+                .orElse(null);
+    }*/
 
     static void findPlus(String[] grid, int i , int j, List<List<String>> plusList){
         List<String> top = findMaxTop(grid, i, j);

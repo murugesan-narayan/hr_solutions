@@ -19,7 +19,6 @@ public class HappyLadybugs {
                 break;
             }
         }
-        int n = b.length();
         if (emptyCount >= 1 && !singleCount) {
             return "YES";
         }

@@ -1,9 +1,13 @@
 package datastructures.linkedlist;
 
 public class CompareTwoLinkedLists {
-    class Node {
+    static class Node {
         int data;
         Node next;
+        Node(int data, Node next) {
+            this.data =data;
+            this.next =next;
+        }
     }
 
     int CompareLists(Node headA, Node headB) {
@@ -22,7 +26,14 @@ public class CompareTwoLinkedLists {
             return 1;
         } else {
             return 0;
-
         }
     }
+
+    public static void main(String[] args) {
+        Node a = new Node(1,null);
+        Node b = new Node(5,null);
+        int v = new CompareTwoLinkedLists().CompareLists(a, b);
+        System.out.println("v = " + v);
+    }
+
 }

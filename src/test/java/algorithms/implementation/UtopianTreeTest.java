@@ -11,4 +11,10 @@ class UtopianTreeTest {
         int height = UtopianTree.utopianTree(4);
         assertEquals(7, height);
     }
+
+    @Test
+    void utopianTree1() {
+        int height = UtopianTree.utopianTree(5);
+        assertEquals(14, height);
+    }
 }

@@ -10,4 +10,9 @@ class SumVsXORTest {
         long count = SumVsXOR.sumXor(5);
         assertEquals(2, count);
     }
+    @Test
+    public void sumXor2() {
+        long count = SumVsXOR.sumXor(6);
+        assertEquals(2, count);
+    }
 }

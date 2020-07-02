@@ -1,7 +1,5 @@
 package datastructures.advanced;
 
-import java.util.Arrays;
-
 public class FindMaximumIndexProduct {
     static long solve(int[] arr) {
         long maxIndexProduct = 0;

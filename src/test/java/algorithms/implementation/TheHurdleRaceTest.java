@@ -12,4 +12,11 @@ class TheHurdleRaceTest {
                 new int[]{1, 6, 3, 5, 2});
         assertEquals(2, doses);
     }
+
+    @Test
+    void hurdleRace1() {
+        int doses = TheHurdleRace.hurdleRace(5,
+                new int[]{1, 6, 3, 5, 2});
+        assertEquals(1, doses);
+    }
 }

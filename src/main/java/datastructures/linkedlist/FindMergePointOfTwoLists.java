@@ -1,12 +1,12 @@
 package datastructures.linkedlist;
 
 public class FindMergePointOfTwoLists {
-    class Node {
+    static class Node {
         int data;
         Node next;
     }
 
-    int FindMergeNode(Node headA, Node headB) {
+    static int FindMergeNode(Node headA, Node headB) {
         Node currentA = headA;
         Node currentB = headB;
 
@@ -46,6 +46,17 @@ public class FindMergePointOfTwoLists {
         return currentA.data;
     }
 
+    public static void main(String[] args) {
+        Node n = new Node();
+        n.data=1;
+        n.next=null;
+        Node p = new Node();
+        p.data=1;
+        p.next=null;
+        int i = FindMergeNode(n, p);
+        System.out.println("i = " + i);
+    }
+/*
     static class SinglyLinkedListNode {
         int data;
         SinglyLinkedListNode next;
@@ -69,5 +80,5 @@ public class FindMergePointOfTwoLists {
             head = head.next;
         }
         return l;
-    }
+    }*/
 }

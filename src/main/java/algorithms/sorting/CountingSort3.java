@@ -11,7 +11,7 @@ public class CountingSort3 {
         int[] a = new int[100];
         for(int i=0;i<N;i++){
             arr[i]=in.nextInt();
-            String s =in.next();
+            in.next();
             a[arr[i]]++;
         }
         for(int j=0;j<100;j++){

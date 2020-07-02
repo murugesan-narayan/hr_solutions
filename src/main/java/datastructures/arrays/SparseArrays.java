@@ -9,10 +9,9 @@ public class SparseArrays {
 
     static int[] matchingStrings(String[] strings, String[] queries) {
         Map<String, Integer> map = new HashMap<>();
-        int result[] = new int[queries.length];
+        int[] result = new int[queries.length];
 
-        for (int i = 0; i < strings.length; i++) {
-            String inputString = strings[i];
+        for (String inputString : strings) {
             if (map.containsKey(inputString)) {
                 map.put(inputString, map.get(inputString) + 1);
             } else {
@@ -34,13 +33,13 @@ public class SparseArrays {
         Scanner sc = new Scanner(System.in);
         int noOfStrings = sc.nextInt();
 
-        String str[] = new String[noOfStrings];
+        String[] str = new String[noOfStrings];
 
         for (int i = 0; i < noOfStrings; i++) {
             str[i] = sc.next();
         }
         int queries = sc.nextInt();
-        String strQ[] = new String[queries];
+        String[] strQ = new String[queries];
 
         for (int i = 0; i < queries; i++) {
             strQ[i] = sc.next();

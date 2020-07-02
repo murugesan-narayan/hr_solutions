@@ -1,8 +1,6 @@
 package algorithms.strings;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 //TODO NOT completed
 public class CommonChild {
@@ -10,6 +8,7 @@ public class CommonChild {
         String s1 = "SHINCHAN";
         String s2 = "NOHARAAA";
         int i1 = commonChild(s1, s2);
+        System.out.println("i1 = " + i1);
         List<Character> list1 = s1.chars().mapToObj(i -> (char)i).collect(Collectors.toList());
         List<Character> list2 = s2.chars().mapToObj(i -> (char)i).collect(Collectors.toList());
         list1.retainAll(list2);
@@ -45,8 +44,7 @@ public class CommonChild {
     }
     static boolean isSubStrFound(String str, List<Character> sub) {
         int ci = 0;
-        for(int i = 0; i < sub.size(); i++) {
-            char c = sub.get(i);
+        for (char c : sub) {
             ci = str.indexOf(c, ci);
             if (ci == -1) return false;
         }
@@ -66,8 +64,7 @@ public class CommonChild {
                     mat[i + 1][j + 1] = mat[i][j] + 1;
                 } else {
                     mat[i + 1][j + 1] =
-                            mat[i + 1][j] > mat[i][j + 1] ?
-                                    mat[i + 1][j] : mat[i][j + 1];
+                            Math.max(mat[i + 1][j], mat[i][j + 1]);
                 }
             }
         }

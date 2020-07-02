@@ -1,7 +1,7 @@
 package datastructures.linkedlist;
 
 public class GetNodeValue {
-    class Node {
+/*    class Node {
         int data;
         Node next;
     }
@@ -17,15 +17,16 @@ public class GetNodeValue {
             p1 = p1.next;
         }
         return p2.data;
-    }
-    class SinglyLinkedListNode {
+    }*/
+    static class SinglyLinkedListNode {
         int data;
         SinglyLinkedListNode next;
     }
 
-
     static int getNode(SinglyLinkedListNode head, int positionFromTail) {
+
         int i = 0;
+        if (head == null) return -1;
         SinglyLinkedListNode temp = head;
         while(temp != null) {
             i++;
@@ -39,6 +40,11 @@ public class GetNodeValue {
     }
 
     public static void main(String[] args) {
-
+        SinglyLinkedListNode node = new SinglyLinkedListNode();
+        node.data = 1;
+        int v = getNode(node, 1);
+        System.out.println("v = " + v);
+        v = getNode(node, 2);
+        System.out.println("v = " + v);
     }
 }

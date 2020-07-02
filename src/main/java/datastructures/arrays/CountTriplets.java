@@ -11,17 +11,16 @@ public class CountTriplets {
         int n = 6;
         int r = 3;
         int tripletsCount = 0;
-        Map<Long, Long> leftMap = new HashMap();
-        Map<Long, Long> rightMap = new HashMap();
+        Map<Long, Long> leftMap = new HashMap<>();
+        Map<Long, Long> rightMap = new HashMap<>();
         for (Long v : ar) {
-            if (v != 1 && v%r != 0) continue;
             rightMap.put(v, rightMap.getOrDefault(v, 0L) + 1L);
         }
         for (int i=0; i<n-1; i++) {
             Long cv = ar[i];
             rightMap.put(cv, rightMap.getOrDefault(cv, 0L) - 1);
             long lc = 0, rc = 0;
-            if (leftMap.containsKey(cv/r) && cv % r == 0) lc = leftMap.get(cv/r);
+            if (leftMap.containsKey(cv / r)) lc = leftMap.get(cv/r);
             if (rightMap.containsKey(cv*r)) rc = rightMap.get(cv*r);
             tripletsCount += lc * rc;
             leftMap.put(cv, leftMap.getOrDefault(cv, 0L) + 1);

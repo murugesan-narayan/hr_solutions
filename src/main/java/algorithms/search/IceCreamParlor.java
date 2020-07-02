@@ -18,7 +18,7 @@ public class IceCreamParlor {
         }
         return result;
     }
-    static int[] whatFlavors1(int[] cost, int money) {
+/*    static int[] whatFlavors1(int[] cost, int money) {
         int result[] = new int[2];
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < cost.length; i++) {
@@ -33,5 +33,5 @@ public class IceCreamParlor {
             map.put(x, i);
         }
         return result;
-    }
+    }*/
 }

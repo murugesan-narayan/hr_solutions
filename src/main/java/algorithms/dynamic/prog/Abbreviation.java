@@ -10,7 +10,7 @@ public class Abbreviation {
     Capitalize zero or more of a's lowercase letters.
     Delete all of the remaining lowercase letters in a.
     */
-    static String abbreviation1(String a, String b) {
+    /*static String abbreviation1(String a, String b) {
         int al = a.length();
         int bl = b.length();
         if (bl > al)
@@ -31,13 +31,13 @@ public class Abbreviation {
             char c = a.charAt(i);
             if (Character.isLowerCase(c) && map.get(Character.toUpperCase(c)) == null )
                 str = str.replaceAll(Character.toString(c), "");
-            /*else if (Character.isUpperCase(c) && map.get(c) == null)
-                return "NO";*/
+            *//*else if (Character.isUpperCase(c) && map.get(c) == null)
+                return "NO";*//*
         }
         str = str.toUpperCase();
 
         if (!str.equals(b)) return "NO";
-        /*for (Map.Entry<Character, Integer> entry: map.entrySet()) {
+        *//*for (Map.Entry<Character, Integer> entry: map.entrySet()) {
             char c = entry.getKey();
             int count = entry.getValue();
             int fromIndex = 0;
@@ -46,10 +46,10 @@ public class Abbreviation {
                 if (index == -1) return "NO";
                 fromIndex = index + 1;
             }
-        }*/
+        }*//*
 
         return "YES";
-    }
+    }*/
 
     static String abbreviation(String a, String b) {
         int al = a.length();
@@ -81,7 +81,7 @@ public class Abbreviation {
         }
 
         if (!str.toUpperCase().equals(b)) {
-            String ucSetStr = ucSet.stream().map((a1)-> "" + a1).reduce((a2,b2)->a2+b2).get();
+            String ucSetStr = ucSet.stream().map((a1)-> "" + a1).reduce((a2,b2)->a2+b2).orElse("");
             if(str.equals(ucSetStr)) return "YES";
             return "NO";
         }

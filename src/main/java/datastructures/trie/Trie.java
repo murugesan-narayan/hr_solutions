@@ -1,7 +1,7 @@
 package datastructures.trie;
 
 public class Trie {
-    private TrieNode root;
+    private final TrieNode root;
     Trie(TrieNode root) {this.root = root;}
 
     void insert(String word) {
@@ -10,7 +10,7 @@ public class Trie {
             currentNode = currentNode.getChildren().computeIfAbsent(c, k -> new TrieNode());
             currentNode.incrementSize();
         }
-        currentNode.setEndOfWord(true);
+        //currentNode.setEndOfWord(true);
     }
 
     int findByPrefix(String prefix) {

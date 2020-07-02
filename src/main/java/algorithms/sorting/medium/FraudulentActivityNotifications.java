@@ -1,7 +1,5 @@
 package algorithms.sorting.medium;
 
-import java.util.*;
-
 public class FraudulentActivityNotifications {
 
     static int activityNotifications(int[] expenditure, int d) {
@@ -33,15 +31,15 @@ public class FraudulentActivityNotifications {
     private static double getMedian(int d, int[] data) {
         double median = 0;
         if (d % 2 == 0) {
-            Integer m1 = null;
-            Integer m2 = null;
+            int m1 = -1;
+            int m2 = -1;
             int count = 0;
             for (int j = 0; j < data.length; j++) {
                 count += data[j];
-                if (m1 == null && count >= d/2) {
+                if (m1 == -1 && count >= d/2) {
                     m1 = j;
                 }
-                if (m2 == null && count >= d/2 + 1) {
+                if (count >= d / 2 + 1) {
                     m2 = j;
                     break;
                 }

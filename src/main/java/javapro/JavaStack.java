@@ -53,9 +53,9 @@ public class JavaStack {
                         break;
                     }
                     char pc = stack.pop();
-                    if (c == '}' && pc == '{') continue;
-                    else if (c == ']' && pc == '[') continue;
-                    else if (c == ')' && pc == '(') continue;
+                    if (c == '}' && pc == '{') System.out.println("cont");
+                    else if (c == ']' && pc == '[') System.out.println("cont");
+                    else if (c == ')' && pc == '(') System.out.println("cont");
                     else {
                         failed = true;
                         break;
@@ -63,8 +63,7 @@ public class JavaStack {
                 }
             }
             if (failed) System.out.println(false);
-            else if (stack.isEmpty()) System.out.println(true);
-            else System.out.println(false);
+            else System.out.println(stack.isEmpty());
         }
 
     }

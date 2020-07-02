@@ -35,7 +35,7 @@ public class JavaAnnotations {
             String role = in.next();
             int spend = in.nextInt();
             try {
-                Class annotatedClass = FamilyMember.class;
+                Class<FamilyMember> annotatedClass = FamilyMember.class;
                 Method[] methods = annotatedClass.getMethods();
                 for (Method method : methods) {
                     if (method.isAnnotationPresent(FamilyBudget.class)) {
@@ -45,7 +45,7 @@ public class JavaAnnotations {
                         int budgetLimit = family.budgetLimit();
                         if (userRole.equals(role)) {
                             if(spend<=budgetLimit){
-                                method.invoke(FamilyMember.class.newInstance(),
+                                method.invoke(FamilyMember.class.getDeclaredConstructor().newInstance(),
                                         budgetLimit, spend);
                             }else{
                                 System.out.println("Budget Limit Over");

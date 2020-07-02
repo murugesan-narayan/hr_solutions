@@ -1,9 +1,5 @@
 package algorithms.sorting;
 
-import java.util.Arrays;
-import java.util.StringJoiner;
-import java.util.stream.Collectors;
-
 public class InsertionSortPart1 {
     static void insertionSort1(int n, int[] arr) {
         for (int i = n-1; i >= 0; i--) {

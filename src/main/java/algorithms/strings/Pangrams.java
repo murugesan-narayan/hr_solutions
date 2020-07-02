@@ -1,10 +1,7 @@
 package algorithms.strings;
 
-import java.util.Arrays;
 import java.util.LinkedHashSet;
-import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 public class Pangrams {
     public static void main(String[] args) {

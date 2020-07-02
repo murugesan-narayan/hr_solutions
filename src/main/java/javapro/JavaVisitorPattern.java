@@ -9,9 +9,9 @@ enum Color {
 
 abstract class Tree {
 
-    private int value;
-    private Color color;
-    private int depth;
+    private final int value;
+    private final Color color;
+    private final int depth;
 
     public Tree(int value, Color color, int depth) {
         this.value = value;
@@ -36,7 +36,7 @@ abstract class Tree {
 
 class TreeNode extends Tree {
 
-    private ArrayList<Tree> children = new ArrayList<>();
+    private final ArrayList<Tree> children = new ArrayList<>();
 
     public TreeNode(int value, Color color, int depth) {
         super(value, color, depth);

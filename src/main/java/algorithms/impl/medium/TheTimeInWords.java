@@ -1,8 +1,5 @@
 package algorithms.impl.medium;
 
-import java.time.LocalTime;
-import java.util.stream.IntStream;
-
 public class TheTimeInWords {
     static String timeInWords(int h, int m) {
         String[] nums = { "zero", "one", "two", "three", "four",

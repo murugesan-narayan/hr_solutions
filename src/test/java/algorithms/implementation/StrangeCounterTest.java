@@ -11,4 +11,10 @@ class StrangeCounterTest {
         long l = StrangeCounter.strangeCounter(4);
         assertEquals(6, l);
     }
+
+    @Test
+    void strangeCounter1() {
+        long l = StrangeCounter.strangeCounter(5);
+        assertEquals(5, l);
+    }
 }

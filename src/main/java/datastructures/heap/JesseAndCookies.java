@@ -1,19 +1,16 @@
 package datastructures.heap;
 
 
-import java.io.*;
-import java.math.*;
-import java.text.*;
+//import java.io.*;
 import java.util.*;
-import java.util.regex.*;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class JesseAndCookies {
     public static void main(String[] args) {
         int k = 90;
         int[] A = new int[]{13, 47, 74, 12, 89, 74, 18, 38};
-        cookies1(k, A);
+        int v = cookies1(k, A);
+        System.out.println("v = " + v);
     }
     /*
      * Complete the cookies function below.
@@ -23,19 +20,23 @@ public class JesseAndCookies {
         pq.addAll(Arrays.stream(A).boxed().collect(Collectors.toList()));
         int count = 0;
         while (pq.size() > 1 && pq.peek() < k) {
-            int v1 = pq.poll();
-            int v2 = pq.poll();
-            int newVal = v1 + 2 * v2;
+            Integer v1 = pq.poll();
+            if (v1 == null) v1 = 0;
+            Integer v2 = pq.poll();
+            if (v2 == null) v2 = 0;
+            int newVal = v1 + (2 * v2);
             pq.add(newVal);
             count++;
         }
-        return pq.peek() >= k ? count : -1;
+        Integer re = pq.peek();
+        if (re == null) re = 0;
+        return re >= k ? count : -1;
     }
 
 
-    private static final Scanner scanner = new Scanner(System.in);
+    //private static final Scanner scanner = new Scanner(System.in);
 
-    public static void main1(String[] args) throws IOException {
+/*    public static void main1(String[] args) {//throws IOException {
         //BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
         String[] nk = scanner.nextLine().split(" ");
@@ -59,5 +60,5 @@ public class JesseAndCookies {
         //bufferedWriter.newLine();
 
         //bufferedWriter.close();
-    }
+    }*/
 }

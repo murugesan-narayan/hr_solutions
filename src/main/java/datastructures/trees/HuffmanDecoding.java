@@ -1,13 +1,13 @@
 package datastructures.trees;
 
 public class HuffmanDecoding {
-    class Node {
+    static class Node {
         public int frequency; // the frequency of this tree
         public char data;
         public Node left, right;
     }
 
-    void decode(String S, Node root) {
+    /*void decode(String S, Node root) {
         Node currentRoot = root;
         if (root == null)
             return;
@@ -23,20 +23,30 @@ public class HuffmanDecoding {
             }
 
         }
-    }
+    }*/
 
     //MyCode
-    /*void decode(String s, Node root) {
+    void decode(String s, Node root) {
         if (root == null || s == null) return;
         char[] arr = s.toCharArray();
         Node currNode = root;
-        for (int i = 0; i<arr.length; i++) {
-            if (arr[i] == '0') currNode = currNode.left;
-            else if (arr[i] == '1') currNode = currNode.right;
+        for (char c : arr) {
+            if (c == '0') currNode = currNode.left;
+            else if (c == '1') currNode = currNode.right;
+            if (currNode == null) break;
             if (currNode.left == null && currNode.right == null) {
                 System.out.print(currNode.data);
                 currNode = root;
             }
         }
-    }*/
+    }
+
+    public static void main(String[] args) {
+        HuffmanDecoding decoding = new HuffmanDecoding();
+        Node node = new Node();
+        node.data = 1;
+        node.frequency = 1;
+        decoding.decode("test", node);
+        decoding.decode("tes1t", node);
+    }
 }

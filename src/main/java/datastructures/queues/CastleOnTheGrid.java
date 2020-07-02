@@ -18,6 +18,7 @@ public class CastleOnTheGrid {
             nToSearch = positions.size();
             for (int i = 0; i < nToSearch; i++) {
                 int[] position = positions.poll();
+                if (position == null) continue;
                 int x = position[0];
                 int y = position[1];
                 if (x == goalX && y == goalY) {
@@ -25,28 +26,28 @@ public class CastleOnTheGrid {
                 }
                 // up - traverse direction
                 for (int j = y-1; j >= 0 && grid[x].charAt(j) != 'X'; j--) {
-                    if (visited[x][j] == false) {
+                    if (!visited[x][j]) {
                         positions.add(new int[]{x,j});
                         visited[x][j] = true;
                     }
                 }
                 // down
                 for (int j = y+1; j < n && grid[x].charAt(j) != 'X'; j++) {
-                    if (visited[x][j] == false) {
+                    if (!visited[x][j]) {
                         positions.add(new int[]{x,j});
                         visited[x][j] = true;
                     }
                 }
                 // left
                 for (int j = x-1; j >= 0 && grid[j].charAt(y) != 'X'; j--) {
-                    if (visited[j][y] == false) {
+                    if (!visited[j][y]) {
                         positions.add(new int[]{j,y});
                         visited[j][y] = true;
                     }
                 }
                 // right
                 for (int j = x+1; j < n && grid[j].charAt(y) != 'X'; j++) {
-                    if (visited[j][y] == false) {
+                    if (!visited[j][y]) {
                         positions.add(new int[]{j,y});
                         visited[j][y] = true;
                     }
@@ -102,4 +103,14 @@ public class CastleOnTheGrid {
         }
         return -1;
     }*/
+
+    public static void main(String[] args) {
+        String[] grid = new String[]{"abcdef"};
+        int startX = 1;
+        int startY = 2;
+        int goalX = 3;
+        int goalY = 5;
+        int moves = CastleOnTheGrid.minimumMoves(grid, startX, startY, goalX, goalY);
+        System.out.println("moves = " + moves);
+    }
 }

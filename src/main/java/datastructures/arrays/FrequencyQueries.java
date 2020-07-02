@@ -3,7 +3,6 @@ package datastructures.arrays;
 import java.io.*;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
-import java.time.temporal.TemporalUnit;
 import java.util.*;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -65,7 +64,7 @@ public class FrequencyQueries {
                 if (currCount > 0) countMap.put(currCount, countMap.getOrDefault(currCount,0) - 1);
             } else if (type == 2) {
                 int currCount = dataMap.getOrDefault(num, 0);
-                if (currCount == 0) ;
+                if (currCount == 0) System.out.println("currCount == 0");
                 else if (currCount == 1) {
                     dataMap.remove(num);
                     countMap.put(currCount, countMap.getOrDefault(currCount,0) - 1);

@@ -14,8 +14,8 @@ public class Java1DArray {
         scan.close();
 
         // Prints each sequential element in array a
-        for (int i = 0; i < a.length; i++) {
-            System.out.println(a[i]);
+        for (int value : a) {
+            System.out.println(value);
         }
     }
 }

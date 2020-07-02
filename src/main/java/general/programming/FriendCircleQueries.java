@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 public class FriendCircleQueries {
-    private static final Scanner scanner = new Scanner(System.in);
+    //private static final Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(
                 new FileInputStream("src/main/java/general/programming/fcdata.txt")));
@@ -28,19 +28,18 @@ public class FriendCircleQueries {
         System.out.println(LocalDateTime.now());
         int[] ans = maxCircle(queries);
         System.out.println(LocalDateTime.now());
-        for (int i = 0; i < ans.length; i++)
-            System.out.println(ans[i]);
+        for (int an : ans) System.out.println(an);
     }
 
-    public static void main1(String[] args) {
+/*    public static void main1(String[] args) {
         int[][] queries = new int[][] {
                 {1, 2}, {3, 4}, {1, 3},
                 {5, 7}, {5, 6}, {7, 4} };
         int[] ans = maxCircle(queries);
-        for (int i = 0; i < ans.length; i++) {
-            System.out.println(ans[i]);
+        for (int an : ans) {
+            System.out.println(an);
         }
-    }
+    }*/
     static int[] maxCircle(int[][] queries) {
         int[] result = new int[queries.length];
         Map<Integer, Set<Integer>> countMap = new HashMap<>();
@@ -58,20 +57,20 @@ public class FriendCircleQueries {
                 countMap.put(v2, set);
                 if (countMax < 2) countMax = 2;
                 result[i] = countMax;
-            } else if (c1 == null && c2 != null) {
+            } else if (c1 == null) {
                 c2.add(v1);
                 if (countMax < c2.size())
                     countMax = c2.size();
                 countMap.put(v1, c2);
                 result[i] = countMax;
-            } else if (c1 != null && c2 == null) {
+            } else if (c2 == null) {
                 c1.add(v2);
                 if (countMax < c1.size())
                     countMax = c1.size();
                 countMap.put(v2, c1);
                 result[i] = countMax;
             } else {
-                if (c1 == c2) /* NO OPS */;
+                if (c1 == c2) System.out.println("NO OPS");/* NO OPS */
                 else if (c1.size()>c2.size()) {
                     c1.addAll(c2);
                     if (countMax < c1.size())

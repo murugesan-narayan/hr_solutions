@@ -2,14 +2,14 @@ package algorithms.debugging;
 
 public class XORStrings {
     public static String stringsXOR(String s, String t) {
-        String res = new String("");
+        StringBuilder res = new StringBuilder();
         for(int i = 0; i < s.length(); i++) {
             if(s.charAt(i) == t.charAt(i))
-                res += "0";
+                res.append("0");
             else
-                res += "1";
+                res.append("1");
         }
 
-        return res;
+        return res.toString();
     }
 }

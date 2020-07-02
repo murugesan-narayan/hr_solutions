@@ -1,10 +1,6 @@
 package algorithms.search;
 
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 public class TripleSum {
 
@@ -13,14 +9,13 @@ public class TripleSum {
         b = Arrays.stream(b).distinct().sorted().toArray();
         c = Arrays.stream(c).distinct().sorted().toArray();
         long count = 0;
-        for (int j=0; j < b.length; j++) {
-            int bv = b[j];
+        for (int bv : b) {
             long ca = 0, cc = 0;
-            for (int i=0; i < a.length && bv >= a[i]; i++)
+            for (int i = 0; i < a.length && bv >= a[i]; i++)
                 ca++;
-            for (int k=0; k < c.length && bv >= c[k]; k++)
+            for (int k = 0; k < c.length && bv >= c[k]; k++)
                 cc++;
-            count += ca*cc;
+            count += ca * cc;
         }
         return count;
     }

@@ -6,13 +6,13 @@ import java.util.Queue;
 import java.util.TreeMap;
 
 public class TopView {
-    class Node {
+    static class Node {
         int data;
         Node left;
         Node right;
     }
 
-    void topView(Node root) {
+/*    void topView(Node root) {
         Node rootNode = root;
 
         if (rootNode == null)
@@ -21,9 +21,9 @@ public class TopView {
         System.out.print(rootNode.data + " ");
         printright(rootNode.right);
 
-    }
+    }*/
 
-    void printLeft(Node rootNode) {
+/*    void printLeft(Node rootNode) {
         if (rootNode == null)
             return;
         printLeft(rootNode.left);
@@ -36,20 +36,20 @@ public class TopView {
         System.out.print(rootNode.data + " ");
         printright(rootNode.right);
 
-    }
+    }*/
 
     //MyCode
     public static void mu_topView(Node root) {
         class QueueObj {
-            Node node;
-            int hd;
+            final Node node;
+            final int hd;
             QueueObj(Node node, int hd) {
                 this.node = node;
                 this.hd = hd;
             }
         }
         Queue<QueueObj> q = new LinkedList<>();
-        Map<Integer, Node> topViewMap = new TreeMap<Integer, Node>();
+        Map<Integer, Node> topViewMap = new TreeMap<>();
         q.add(new QueueObj(root, 0));
         while (!q.isEmpty()) {
             QueueObj queObj = q.poll();
@@ -62,6 +62,12 @@ public class TopView {
         }
         for (Map.Entry<Integer, Node> eS: topViewMap.entrySet())
             System.out.print(eS.getValue().data + " ");
+    }
+
+    public static void main(String[] args) {
+        Node node = new Node();
+        node.data = 1;
+        mu_topView(node);
     }
 
 }

@@ -1,7 +1,7 @@
 package algorithms.implementation;
 
 public class LisasWorkbook {
-    static int workbook(int n, int k, int[] arr) {
+    static int workbook(int k, int[] arr) {
         int special = 0;
         int page = 1;
         for (int p : arr) {

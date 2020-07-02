@@ -5,7 +5,7 @@ public class BeautifulBinaryString {
         String s = "0101010";
         //StringBuilder sb = new StringBuilder(s);
         int c = 0;
-        while (s.indexOf("010") >= 0) {
+        while (s.contains("010")) {
             s = s.replaceFirst("010", "011");
             c++;
         }

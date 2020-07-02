@@ -1,7 +1,5 @@
 package datastructures.arrays;
 
-import java.util.*;
-
 public class MinimumSwaps2 {
     public static void main(String[] args) {
         int[] a = new int[] {4, 3, 1, 2};
@@ -20,7 +18,7 @@ public class MinimumSwaps2 {
         System.out.println("swaps = " + swaps);
     }
 
-    private static int swapElement(int[] a, int i) {
+/*    private static int swapElement(int[] a, int i) {
         int swaps = 0;
         int current = a[i];
         int target = a[current-1];
@@ -30,5 +28,5 @@ public class MinimumSwaps2 {
             swaps++;
         }
         return swaps;
-    }
+    }*/
 }

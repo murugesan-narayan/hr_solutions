@@ -16,7 +16,7 @@ class Person {
         // statement:
         if (age < 13) {
             System.out.println("You are young.");
-        } else if (age >= 13 && age < 18) {
+        } else if (age < 18) {
             System.out.println("You are a teenager.");
 
         } else {
@@ -28,5 +28,10 @@ class Person {
     public void yearPasses() {
         // Increment this person's age.
         this.age++;
+    }
+
+    public static void main(String[] args) {
+        new Person(5).amIOld();
+        new Person(5).yearPasses();
     }
 }

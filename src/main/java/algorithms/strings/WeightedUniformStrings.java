@@ -14,7 +14,7 @@ public class WeightedUniformStrings {
         weightMap.put('m', i++);weightMap.put('n', i++);weightMap.put('o', i++);weightMap.put('p', i++);
         weightMap.put('q', i++);weightMap.put('r', i++);weightMap.put('s', i++);weightMap.put('t', i++);
         weightMap.put('u', i++);weightMap.put('v', i++);weightMap.put('w', i++);weightMap.put('x', i++);
-        weightMap.put('y', i++);weightMap.put('z', i++);
+        weightMap.put('y', i++);weightMap.put('z', i);
         Map<Integer, String> totalWeightMap = new HashMap<>();
         char prevChar = '-';
         int len = 0;

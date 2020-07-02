@@ -1,7 +1,7 @@
 package datastructures.linkedlist;
 
 public class MergeTwoSortedLinkedLists {
-    class Node {
+    /*class Node {
         int data;
         Node next;
     }
@@ -20,8 +20,8 @@ public class MergeTwoSortedLinkedLists {
             headB.next = MergeLists(headA, headB.next);
             return headB;
         }
-    }
-    class SinglyLinkedListNode {
+    }*/
+    static class SinglyLinkedListNode {
         int data;
         SinglyLinkedListNode next;
     }
@@ -29,7 +29,7 @@ public class MergeTwoSortedLinkedLists {
     static SinglyLinkedListNode mergeLists_myCode(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
         if (head1 == null) return head2;
         if (head2 == null) return head1;
-        SinglyLinkedListNode sortingNode = null;
+        SinglyLinkedListNode sortingNode;
         if(head1.data <= head2.data) {
             sortingNode = head1;
             head1 = sortingNode.next;
@@ -52,5 +52,14 @@ public class MergeTwoSortedLinkedLists {
         if (head1 == null) sortingNode.next = head2;
         else sortingNode.next = head1;
         return sortedHead;
+    }
+
+    public static void main(String[] args) {
+        SinglyLinkedListNode node1 = new SinglyLinkedListNode();
+        node1.data=1;
+        SinglyLinkedListNode node3 = new SinglyLinkedListNode();
+        node1.data=3;
+        SinglyLinkedListNode result = mergeLists_myCode(node1, node3);
+        System.out.println("result = " + result);
     }
 }

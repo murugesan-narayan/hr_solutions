@@ -5,10 +5,10 @@ import java.util.*;
 public class LargestRectangle {
     public static void main(String[] args) {
 //      Scanner sc = new Scanner(System.in);
-        Stack<Integer> st = new Stack<Integer>();
+        Stack<Integer> st = new Stack<>();
 //        int n = sc.nextInt();
         int maxArea = 0;
-        int a[] = new int[]{11, 11, 10, 10, 10};//{1, 2, 3, 4, 5};
+        int[] a = new int[]{11, 11, 10, 10, 10};//{1, 2, 3, 4, 5};
 /*        for (int i = 0; i < n; i++) {
             a[i] = sc.nextInt();
 
@@ -40,7 +40,7 @@ public class LargestRectangle {
         //sc.close();
     }
 
-    static long largestRectangle(int[] h) {
+/*    static long largestRectangle(int[] h) {
         long maxArea = 0;
         Stack<Integer> stack = new Stack<>(); //height
         Map<Integer, Integer> heightLenMap = new HashMap<>();
@@ -62,7 +62,7 @@ public class LargestRectangle {
         }
         System.out.println(maxArea);
         return maxArea;
-    }
+    }*/
 //5
 // 1 2 3 4 5
 

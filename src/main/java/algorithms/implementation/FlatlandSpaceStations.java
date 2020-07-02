@@ -1,6 +1,5 @@
 package algorithms.implementation;
 
-import java.util.stream.IntStream;
 
 public class FlatlandSpaceStations {
     static int flatlandSpaceStations(int n, int[] c) {

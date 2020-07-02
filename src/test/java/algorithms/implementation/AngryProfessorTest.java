@@ -12,4 +12,11 @@ class AngryProfessorTest {
                 new int[]{-1, -3, 4, 2});
         assertEquals("YES", cancel);
     }
+
+    @Test
+    void angryProfessor2() {
+        String cancel = AngryProfessor.angryProfessor(2,
+                new int[]{-1, -3, 4, 2});
+        assertEquals("NO", cancel);
+    }
 }

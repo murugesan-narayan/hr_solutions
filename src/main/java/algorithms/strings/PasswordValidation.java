@@ -1,11 +1,11 @@
 package algorithms.strings;
 
-import java.util.regex.Pattern;
+import java.util.Random;
 
 public class PasswordValidation {
     public static void main(String[] args) {
         // Return the minimum number of characters to make the password strong
-        int n = 7;
+        int n = new Random().nextInt(7);
         String password = "AUzs-nV";
         int nu, lc, uc, sc;
         nu = lc = uc = sc = 0;

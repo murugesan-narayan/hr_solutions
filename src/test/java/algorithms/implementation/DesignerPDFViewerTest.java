@@ -14,4 +14,13 @@ class DesignerPDFViewerTest {
         );
         assertEquals(9, area);
     }
+
+    @Test
+    void designerPdfViewer2() {
+        int area = DesignerPDFViewer.designerPdfViewer(
+                new int[]{1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5}
+                , "abd"
+        );
+        assertEquals(9, area);
+    }
 }

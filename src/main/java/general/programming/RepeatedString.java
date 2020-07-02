@@ -16,11 +16,9 @@ public class RepeatedString {
         long trl = r*l;
         int el = (int) (rl - trl);
         long eac = 0;
-        if(el != 0) {
-            String es = s.substring(0, el);
-            m = ap.matcher(es);
-            while (m.find()) eac++;
-        }
+        String es = s.substring(0, el);
+        m = ap.matcher(es);
+        while (m.find()) eac++;
         long end = (ac * r) + eac;
 
         /*StringBuilder sb = new StringBuilder(s);

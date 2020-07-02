@@ -15,7 +15,7 @@ public class CanYouAccess {
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             int num = Integer.parseInt(br.readLine().trim());
-            Object o;// Must be used to hold the reference of the instance of the class
+            Inner.Private o;// Must be used to hold the reference of the instance of the class
             // Solution.Inner.Private
 
             //My Code
@@ -25,11 +25,12 @@ public class CanYouAccess {
 
             // Inner i= new Inner();
             // Private p=new Private();
-            /**main code starts from here*/
+            /*main code starts from here*/
             CanYouAccess.Inner si = new CanYouAccess.Inner();
-            o = si.new Private();
-            System.out.println(num + " is " + ((CanYouAccess.Inner.Private) o).powerof2(num));
-            /**main code end  here*/
+            System.out.println("si = " + si);
+            o = new Inner.Private();
+            System.out.println(num + " is " + o.powerof2(num));
+            /*main code end  here*/
 
             System.out.println("An instance of class: " + o.getClass().getCanonicalName() + " has been created");
 
@@ -41,7 +42,7 @@ public class CanYouAccess {
     }// end of main
 
     static class Inner {
-        private class Private {
+        private static class Private {
             private String powerof2(int num) {
                 return ((num & num - 1) == 0) ? "power of 2" : "not a power of 2";
             }

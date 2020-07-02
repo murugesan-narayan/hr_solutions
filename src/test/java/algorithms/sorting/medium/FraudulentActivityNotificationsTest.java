@@ -1,5 +1,6 @@
 package algorithms.sorting.medium;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.io.BufferedReader;
@@ -34,6 +35,7 @@ class FraudulentActivityNotificationsTest {
         assertEquals(0, notifications);
     }
 
+    @Disabled("run only with file")
     @Test
     void activityNotifications_l() throws Exception {
         BufferedReader br = new BufferedReader(new FileReader("input01.txt"));

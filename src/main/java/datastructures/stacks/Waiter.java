@@ -1,7 +1,6 @@
 package datastructures.stacks;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Waiter {
     static int[] waiter(int[] number, int q) {
@@ -118,7 +117,6 @@ public class Waiter {
         //stack init
         Stack<Integer> inStack = new Stack<>();
         for (int v: number) inStack.push(v);
-        int[] result = number;
         int r = 0;
         // **** Q iterations ****
         for (int i = 1; i <= q; i++) {
@@ -140,7 +138,7 @@ public class Waiter {
             //System.out.println("main <<< outStackA: " + outStackA.toString());
 
             while (!outStackB.isEmpty()) {
-                result[r++] = outStackB.pop();
+                number[r++] = outStackB.pop();
             }
             inStack = outStackA;
         }
@@ -149,9 +147,9 @@ public class Waiter {
 
         // **** display the contents of the A stack(s) ****
         while (!inStack.isEmpty()) {
-            result[r++] = inStack.pop();
+            number[r++] = inStack.pop();
         }
         //System.out.println("result = " + Arrays.toString(result));
-        return result;
+        return number;
     }
 }

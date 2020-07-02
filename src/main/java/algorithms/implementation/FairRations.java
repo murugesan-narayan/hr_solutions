@@ -3,8 +3,8 @@ package algorithms.implementation;
 public class FairRations {
     static String fairRations(int[] B) {
         int sum = 0;
-        for(int i=0; i < B.length; i++){
-            sum += B[i];
+        for (int value : B) {
+            sum += value;
         }
         int count = 0;
         if (sum % 2 == 1){

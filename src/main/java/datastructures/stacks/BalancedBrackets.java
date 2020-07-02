@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class BalancedBrackets {
-    private static String matchParenthisis(String str) {
+/*    private static String matchParenthisis(String str) {
         Stack<Character> st = new Stack<Character>();
         char[] ch = str.toCharArray();
         for (char c : ch) {
@@ -32,7 +32,7 @@ public class BalancedBrackets {
 
         return "YES";
 
-    }
+    }*/
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

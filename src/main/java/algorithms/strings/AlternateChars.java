@@ -1,7 +1,5 @@
 package algorithms.strings;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class AlternateChars {
     public static void main(String[] args) {

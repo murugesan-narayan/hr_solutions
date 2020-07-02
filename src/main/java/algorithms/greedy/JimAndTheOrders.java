@@ -1,13 +1,12 @@
 package algorithms.greedy;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
 public class JimAndTheOrders {
     static class Order implements Comparable<Order> {
-        Integer id =0;
-        Integer t =0;
+        Integer id;
+        Integer t;
         Order(int id, int t) {
             this.id = id;
             this.t = t;
@@ -20,13 +19,13 @@ public class JimAndTheOrders {
             return v;
         }
     }
+
     static int[] jimOrders(int[][] orders) {
         Map<Order, Integer> map = new TreeMap<>();
         int i = 1;
         for (int[] order: orders) {
             map.put(new Order(i, order[0]+order[1]), i++);
         }
-        int [] result = map.values().stream().mapToInt(a->a).toArray();
-        return result;
+        return map.values().stream().mapToInt(a->a).toArray();
     }
 }

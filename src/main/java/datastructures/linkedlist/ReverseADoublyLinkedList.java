@@ -1,7 +1,7 @@
 package datastructures.linkedlist;
 
 public class ReverseADoublyLinkedList {
-    class Node {
+/*    class Node {
         int data;
         Node next;
         Node prev;
@@ -18,7 +18,7 @@ public class ReverseADoublyLinkedList {
             current = current.prev;
         }
         return head;
-    }
+    }*/
 
     static class DoublyLinkedListNode {
         int data;
@@ -36,6 +36,13 @@ public class ReverseADoublyLinkedList {
             curr = curr.prev;
         }
         return head;
+    }
+
+    public static void main(String[] args) {
+        DoublyLinkedListNode node = new DoublyLinkedListNode();
+        node.data=1;
+        DoublyLinkedListNode reverse = reverse(node);
+        System.out.println("reverse = " + reverse);
     }
 
 }

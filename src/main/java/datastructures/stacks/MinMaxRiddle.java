@@ -8,7 +8,7 @@ public class MinMaxRiddle {
         return Arrays.copyOfRange(res, 1,res.length);
     }
 
-    private static void getAllPossibleSubArrays(long[] arr, Map<Integer, Long> map) {
+/*    private static void getAllPossibleSubArrays(long[] arr, Map<Integer, Long> map) {
         long arrSize = arr.length;
         //start point
         for (int startPoint = 0; startPoint < arrSize; startPoint++) {
@@ -34,18 +34,17 @@ public class MinMaxRiddle {
                 map.put(count, val);
             }
         }
-    }
+    }*/
 
     static long[] printMaxOfMin(long[] arr)
     {
         int n = arr.length;
-        long[] res = new long[n];
         // Used to find previous and next smaller
         Stack<Integer> s = new Stack<>();
 
         // Arrays to store previous and next smaller
-        int left[] = new int[n+1];
-        int right[]  = new int[n+1];
+        int[] left = new int[n+1];
+        int[] right  = new int[n+1];
 
         // Initialize elements of left[] and right[]
         for (int i=0; i<n; i++)
@@ -84,7 +83,7 @@ public class MinMaxRiddle {
         }
 
         // Create and initialize answer array
-        long ans[] = new long[n+1];
+        long[] ans = new long[n+1];
         for (int i=0; i<=n; i++)
             ans[i] = 0;
 

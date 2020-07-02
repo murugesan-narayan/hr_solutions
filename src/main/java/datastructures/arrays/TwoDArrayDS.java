@@ -1,15 +1,12 @@
 package datastructures.arrays;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Scanner;
 
 public class TwoDArrayDS {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int arr[][] = new int[6][6];
+        int[][] arr = new int[6][6];
         for (int arr_i = 0; arr_i < 6; arr_i++) {
             for (int arr_j = 0; arr_j < 6; arr_j++) {
                 arr[arr_i][arr_j] = in.nextInt();
@@ -36,7 +33,7 @@ public class TwoDArrayDS {
     }
 
     //MyCode
-    static int hourglassSum(int[][] a) {
+/*    static int hourglassSum(int[][] a) {
         List<Integer> hourGlassSumList = new ArrayList<>();
         for (int i=0; i<a.length-2; i++) {
             for (int j=0; j<a.length-2; j++) {
@@ -60,6 +57,6 @@ public class TwoDArrayDS {
             }
         }
         return max;
-    }
+    }*/
 
 }

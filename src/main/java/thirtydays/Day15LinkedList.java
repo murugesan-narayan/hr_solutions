@@ -20,4 +20,8 @@ public class Day15LinkedList {
         return head;
 
     }
+
+    public static void main(String[] args) {
+
+    }
 }

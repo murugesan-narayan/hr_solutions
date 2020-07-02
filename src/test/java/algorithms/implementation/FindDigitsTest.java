@@ -11,4 +11,10 @@ class FindDigitsTest {
         int count = FindDigits.findDigits(1012);
         assertEquals(3, count);
     }
+
+    @Test
+    void findDigits1() {
+        int count = FindDigits.findDigits(10112);
+        assertEquals(4, count);
+    }
 }

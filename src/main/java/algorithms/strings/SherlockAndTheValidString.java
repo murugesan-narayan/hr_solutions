@@ -22,7 +22,7 @@ public class SherlockAndTheValidString {
             }
         }
         String response = "YES";
-        int min = map.values().stream().min(Comparator.naturalOrder()).get();
+        int min = map.values().stream().min(Comparator.naturalOrder()).orElse(0);
         //if (min != max && (min != max-1 || max != min-1))
         //    response = "NO";
         char minChar = '0';
@@ -44,13 +44,13 @@ public class SherlockAndTheValidString {
         int minLen = map.get(minChar);
         if (maxCount > minCount && minCount != 1)
             response = "NO";
-        else if (maxCount > minCount && minCount == 1)
-            if (minLen == 1 || minLen == maxLen - 1) /*OK*/;
+        else if (maxCount > minCount)
+            if (minLen == 1 || minLen == maxLen - 1) {
+                System.out.println("minLen = " + minLen);/*OK*/}
             else response = "NO";
         else if (minCount > maxCount && maxCount != 1)
             response = "NO";
-        else if (minCount > maxCount && maxCount == 1
-                && maxLen - 1 != minLen) response = "NO";
+        else if (minCount > maxCount && maxLen - 1 != minLen) response = "NO";
         else if (minCount == maxCount)
             response = "NO";
 

@@ -13,4 +13,12 @@ class TheTimeInWordsTest {
                 "thirteen minutes to six", timeInWords
         );
     }
+
+    @Test
+    void timeInWords2() {
+        String timeInWords = TheTimeInWords.timeInWords(2, 37);
+        assertEquals(
+                "twenty three minutes to three", timeInWords
+        );
+    }
 }

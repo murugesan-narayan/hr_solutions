@@ -2,12 +2,12 @@ package datastructures.linkedlist;
 
 public class DeleteANode {
 
-    class Node {
+    static class Node {
         int data;
         Node next;
     }
 
-    Node Delete(Node head, int position) {
+    static Node Delete(Node head, int position) {
 
         Node current = head;
         Node prev = current;
@@ -16,11 +16,11 @@ public class DeleteANode {
         if (head == null && position == 0) {
             return null;
         }
-        if (position == 0 && head != null) {
+        if (position == 0) {
             head = head.next;
             return head;
         } else {
-
+            if (head == null) return null;
             current = head.next;
             while (current != null) {
 
@@ -53,4 +53,15 @@ public class DeleteANode {
         return head;
     }*/
 
+    public static void main(String[] args) {
+        Node node1 = new Node();
+        node1.next = null;
+        node1.data = 1;
+        Delete(node1, 1);
+        Node node2 = new Node();
+        node2.next = node1;
+        node2.data = 2;
+        Node re = Delete(node2, 2);
+        System.out.println("re = " + re);
+    }
 }

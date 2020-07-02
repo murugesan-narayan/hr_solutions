@@ -10,14 +10,13 @@ public class TheLoveLetterMystery {
         wl:
         while (isNotPalindrome) {
             for (int i = 0; i < len / 2; i++) {
-                int startIndex = i;
                 int endIndex = len - i - 1;
-                char startChar = sb.charAt(startIndex);
+                char startChar = sb.charAt(i);
                 char endChar = sb.charAt(endIndex);
                 if (startChar != endChar) {
                     if (startChar > endChar) {
                         char r = alpha.charAt(alpha.indexOf(startChar) - 1);
-                        sb.setCharAt(startIndex, r);
+                        sb.setCharAt(i, r);
                     } else {
                         char r = alpha.charAt(alpha.indexOf(endChar) - 1);
                         sb.setCharAt(endIndex, r);

@@ -6,8 +6,7 @@ public class MarsExploration {
         char[] chars = s.toCharArray();
         int a = 0;
         int l = 1;
-        for (int i=0; i<chars.length; i++) {
-            char c = chars[i];
+        for (char c : chars) {
             if (l == 1 || l == 3) if (c != 'S') a++;
             if (l == 2) if (c != 'O') a++;
             if (l == 3) l = 1;

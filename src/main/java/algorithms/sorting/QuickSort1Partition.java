@@ -10,8 +10,7 @@ public class QuickSort1Partition {
         List<Integer> left = new ArrayList<>();
         List<Integer> equal = new ArrayList<>();
         List<Integer> right = new ArrayList<>();
-        for (int i = 0; i < arr.length; i++) {
-            int v = arr[i];
+        for (int v : arr) {
             if (v < p) left.add(v);
             else if (v > p) right.add(v);
             else equal.add(v);

@@ -1,17 +1,12 @@
 package algorithms.strings;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.nio.file.Path;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class SpecialStringAgain {
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) {
         LocalDateTime lts = LocalDateTime.now();
         System.out.println(lts);
         Scanner scan = new Scanner(System.in);
@@ -27,11 +22,10 @@ public class SpecialStringAgain {
                     Map<Character, Integer> map = new HashMap<>();
                     for (char c: sub.toCharArray()) map.put(c, map.getOrDefault(c, 0)+1);
                     if(map.size() != 2) break;
-                    if (map.size() == 2) {
-                        int min = map.values().stream().min(Comparator.naturalOrder()).get();
-                        if (min != 1)
-                            break;//count = 1272919
-                    }
+                    //map.size();
+                    int min = map.values().stream().min(Comparator.naturalOrder()).get();
+                    if (min != 1)
+                        break;//count = 1272919
                     //System.out.println(sub);
                 }
                 lookupSize++;
@@ -61,8 +55,10 @@ public class SpecialStringAgain {
         char c = str.charAt(0);
         boolean flag = true;
         for (int i = 0; i < len/2 ; i++)
-            if (str.charAt(i) != c || str.charAt(len - i - 1) != c)
+            if (str.charAt(i) != c || str.charAt(len - i - 1) != c) {
                 flag = false;
+                break;
+            }
         return flag;
     }
 

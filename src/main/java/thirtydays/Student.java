@@ -1,9 +1,9 @@
 package thirtydays;
 
 public class Student  extends Person {
-    private int[] testScores;
+    private final int[] testScores;
 
-    Student(String firstName, String lastName, int id, int[] testScores) {
+    Student(int id, int[] testScores) {
         super(id);
 
         this.testScores = testScores;
@@ -11,8 +11,8 @@ public class Student  extends Person {
 
     public char calculate() {
         int sum = 0;
-        for (int i = 0; i < testScores.length; i++) {
-            sum += testScores[i];
+        for (int testScore : testScores) {
+            sum += testScore;
         }
         int avg = (sum) / testScores.length;
 
@@ -30,5 +30,11 @@ public class Student  extends Person {
             return 'T';
         }
 
+    }
+
+    public static void main(String[] args) {
+        Student student = new Student(1, new int[]{1,2});
+        char c = student.calculate();
+        System.out.println("c = " + c);
     }
 }

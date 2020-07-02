@@ -11,4 +11,10 @@ class LibraryFineTest {
         int fine = LibraryFine.libraryFine(9, 6, 2015, 6, 6, 2015);
         assertEquals(45, fine);
     }
+
+    @Test
+    void libraryFine1() {
+        int fine = LibraryFine.libraryFine(7, 7, 2016, 7, 8, 2016);
+        assertEquals(0, fine);
+    }
 }

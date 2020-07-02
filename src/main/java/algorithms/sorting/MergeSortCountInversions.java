@@ -1,6 +1,5 @@
 package algorithms.sorting;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class MergeSortCountInversions {
@@ -31,13 +30,12 @@ public class MergeSortCountInversions {
     }
 
     static long countInversions(int[] arr) {
-        int temp[] = new int[arr.length];
-        long count = mergeSort(arr, temp, 0, arr.length - 1);
-        return count;
+        int[] temp = new int[arr.length];
+        return mergeSort(arr, temp, 0, arr.length - 1);
     }
 
     private static long mergeSort(int[] arr, int[] temp, int left, int right) {
-        int mid = 0;
+        int mid;
         long inversionCount = 0;
         if (left < right) {
             mid = (left + right) / 2;

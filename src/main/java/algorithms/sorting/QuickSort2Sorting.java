@@ -7,7 +7,7 @@ public class QuickSort2Sorting {
         sort(arr, 0, arr.length-1);
     }
 
-    static void sort(int arr[], int start, int end) {
+    static void sort(int[] arr, int start, int end) {
         if(start >= end)
             return;
 
@@ -19,7 +19,7 @@ public class QuickSort2Sorting {
         printArray(arr,start, end);
     }
 
-    static int partition(int ar[], int start, int end) {
+    static int partition(int[] ar, int start, int end) {
         int pivot = ar[start];
         ArrayList<Integer> left = new ArrayList<>();
         ArrayList<Integer> right = new ArrayList<>();
@@ -37,7 +37,7 @@ public class QuickSort2Sorting {
         return pi;
     }
 
-    static void copy(ArrayList<Integer> list, int ar[], int startIdx)
+    static void copy(ArrayList<Integer> list, int[] ar, int startIdx)
     {
         for(int num : list)
         {
@@ -52,17 +52,17 @@ public class QuickSort2Sorting {
         System.out.println();
     }
 
-    static void quickSort1(int[] arr) {
+/*    static void quickSort1(int[] arr) {
         sort1(arr, 0, arr.length-1);
         printArray(arr);
-    }
+    }*/
 
-    static void sort1(int arr[], int low, int high)
+/*    static void sort1(int arr[], int low, int high)
     {
         if (low < high)
         {
-            /* pi is partitioning index, arr[pi] is
-              now at right place */
+            *//* pi is partitioning index, arr[pi] is
+              now at right place *//*
             int pi = partition1(arr, low, high);
 
             // Recursively sort elements before
@@ -70,9 +70,9 @@ public class QuickSort2Sorting {
             sort1(arr, low, pi-1);
             sort1(arr, pi+1, high);
         }
-    }
+    }*/
 
-    static int partition1(int arr[], int low, int high) {
+/*    static int partition1(int arr[], int low, int high) {
         int pivot = arr[high];
         int i = (low-1); // index of smaller element
         for (int j=low; j<high; j++)
@@ -95,13 +95,13 @@ public class QuickSort2Sorting {
         arr[high] = temp;
 
         return i+1;
-    }
+    }*/
 
-    static void printArray(int arr[])
+/*    static void printArray(int arr[])
     {
         int n = arr.length;
         for (int i=0; i<n; ++i)
             System.out.print(arr[i]+" ");
         System.out.println();
-    }
+    }*/
 }

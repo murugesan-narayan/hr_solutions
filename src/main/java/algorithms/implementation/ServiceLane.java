@@ -10,7 +10,7 @@ public class ServiceLane {
             int s = c[0];
             int e = c[1];
             int[] range = Arrays.copyOfRange(width, s, e + 1);
-            int min = Arrays.stream(range).min().getAsInt();
+            int min = Arrays.stream(range).min().orElse(0);
             result[ri++] = min;
         }
         return result;

@@ -1,11 +1,9 @@
 package algorithms.impl.medium;
 
-import java.util.Arrays;
-import java.util.List;
+/*import java.util.Arrays;
 import java.util.Map;
-import java.util.Set;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
+import java.util.stream.IntStream;*/
 
 public class AbsolutePermutation {
     static int[] absolutePermutation(int n, int k) {
@@ -24,7 +22,7 @@ public class AbsolutePermutation {
         }
         return per;
     }
-    static int[] absolutePermutation1(int n, int k) {
+/*    static int[] absolutePermutation1(int n, int k) {
         int[] result = IntStream.rangeClosed(1, n).toArray();
         Map<Integer, Integer> nums = Arrays.stream(result)
                 .boxed().collect(Collectors.toMap(key->key, val->0));
@@ -44,5 +42,5 @@ public class AbsolutePermutation {
                 nums.remove(v);
         }
         return result;
-    }
+    }*/
 }

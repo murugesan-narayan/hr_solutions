@@ -86,4 +86,11 @@ public class SelfBalancingTree {
         /* return the (unchanged) node pointer */
         return root;
     }
+
+    public static void main(String[] args) {
+        Node node = new Node();
+        node.val = 1;
+        node.ht = 1;
+        insert(node, 2);
+    }
 }

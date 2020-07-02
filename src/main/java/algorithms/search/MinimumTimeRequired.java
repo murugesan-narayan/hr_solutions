@@ -1,10 +1,6 @@
 package algorithms.search;
 
-import java.io.IOException;
-import java.time.LocalDateTime;
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.LongStream;
 
 public class MinimumTimeRequired {
 
@@ -31,7 +27,7 @@ public class MinimumTimeRequired {
         return result;
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         //BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
         String[] nGoal = scanner.nextLine().split(" ");

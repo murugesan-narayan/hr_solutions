@@ -22,11 +22,11 @@ public class ComponentsInGraph {
             } else if (group1 == null & group2 != null) {
                 group2.add(v1);
                 unionMap.put(v1 , group2);
-            } else if (group1 != null & group2 == null) {
+            } else if (group2 == null) {
                 group1.add(v2);
                 unionMap.put(v2, group1);
             } else {
-                if (group1 == group2) /* NO OPS */;
+                if (group1 == group2) System.out.println()/* NO OPS */;
                 else if (group1.size() < group2.size()) {
                     group2.addAll(group1);
                     for (int iv : group1) unionMap.put(iv, group2);

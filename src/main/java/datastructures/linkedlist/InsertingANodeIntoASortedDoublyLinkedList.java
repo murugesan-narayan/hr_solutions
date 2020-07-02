@@ -45,7 +45,7 @@ public class InsertingANodeIntoASortedDoublyLinkedList {
         return temp;
     }
 
-    static DoublyLinkedListNode sortedInsert_MyCode(DoublyLinkedListNode head, int data) {
+/*    static DoublyLinkedListNode sortedInsert_MyCode(DoublyLinkedListNode head, int data) {
         DoublyLinkedListNode newNode = new DoublyLinkedListNode(data);
         if (head == null) return newNode;
         DoublyLinkedListNode curr = head;
@@ -66,6 +66,14 @@ public class InsertingANodeIntoASortedDoublyLinkedList {
         last.next = newNode;
         newNode.prev = last;
         return head;
+    }*/
+
+    public static void main(String[] args) {
+        DoublyLinkedListNode node = new DoublyLinkedListNode(1);
+        DoublyLinkedListNode result = sortedInsert(node, 2);
+        System.out.println("result = " + result);
+        result = sortedInsert(result, 5);
+        System.out.println("result = " + result);
     }
 
 }

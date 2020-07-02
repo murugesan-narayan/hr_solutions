@@ -1,12 +1,9 @@
 package datastructures.stacks;
 
-import java.util.HashSet;
-import java.util.Set;
-import java.util.Stack;
-import java.util.TreeSet;
+//import java.util.Stack;
 
 public class GameOfTwoStacks {
-    static int twoStacks1(int x, int[] a, int[] b) {
+    /*static int twoStacks1(int x, int[] a, int[] b) {
         long sum = 0;
         int score = 0;
         Stack<Integer> stackA = new Stack<>();
@@ -38,12 +35,12 @@ public class GameOfTwoStacks {
         }
 
         return score;
-    }
+    }*/
 
     static int twoStacks(int x, int[] a, int[] b) {
         int ai = 0;
         int bi = 0;
-        int count = 0;
+        int count;
         int sum = 0;
         // move bi to the position where if only take elements from B, last element it can take
         while (bi < b.length && sum + b[bi] <= x) {
@@ -64,6 +61,7 @@ public class GameOfTwoStacks {
                 // and loop terminates
                 if (sum > x && bi < 0) {
                     ai--;
+                    System.out.println("ai = " + ai);
                     break;
                 }
             }

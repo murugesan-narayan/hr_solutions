@@ -59,14 +59,12 @@ public class PrimeChecker {
             Method[] methods=Prime.class.getDeclaredMethods();
             Set<String> set=new HashSet<>();
             boolean overload=false;
-            for(int i=0;i<methods.length;i++)
-            {
-                if(set.contains(methods[i].getName()))
-                {
-                    overload=true;
+            for (Method method : methods) {
+                if (set.contains(method.getName())) {
+                    overload = true;
                     break;
                 }
-                set.add(methods[i].getName());
+                set.add(method.getName());
 
             }
             if(overload)
@@ -76,7 +74,7 @@ public class PrimeChecker {
         }
         catch(Exception e)
         {
-            System.out.println(e);
+            e.printStackTrace();
         }
     }
 

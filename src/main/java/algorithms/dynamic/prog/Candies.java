@@ -1,7 +1,7 @@
 package algorithms.dynamic.prog;
 
 public class Candies {
-    static long candies1(int n, int[] arr) {
+    /*static long candies1(int n, int[] arr) {
         long count = 0;
         int prevRatingCandies = 0;
         for (int i = 0; i < n; i++) {
@@ -15,7 +15,7 @@ public class Candies {
             System.out.print(prevRatingCandies);
         }
         return count;
-    }
+    }*/
 
     static long candies(int n, int[] arr) {
         int[] candiesArray = new int[n];

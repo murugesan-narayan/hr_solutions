@@ -1,7 +1,7 @@
 package datastructures.trees;
 
-import java.util.HashMap;
-import java.util.Map;
+/*import java.util.HashMap;
+import java.util.Map;*/
 
 public class TreesIsThisABinarySearchTree {
     static class Node {
@@ -14,22 +14,17 @@ public class TreesIsThisABinarySearchTree {
         }
     }
 
-    boolean checkBST(Node root) {
+    static boolean checkBST(Node root) {
         return checkBSTUtil(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
 
-    /**
-     * @param root
-     * @param minValue
-     * @param maxValue
-     * @return
-     */
-    private boolean checkBSTUtil(Node root, int minValue, int maxValue) {
+
+    private static boolean checkBSTUtil(Node root, int minValue, int maxValue) {
         if (root == null)
             return true;
         return (root.data > minValue && root.data < maxValue && checkBSTUtil(root.left, minValue, root.data)&& checkBSTUtil(root.right, root.data, maxValue));
     }
-
+/*
     boolean checkBST_T(Node root) {
         if (root == null) return true;
         Node left = root.left;
@@ -37,7 +32,7 @@ public class TreesIsThisABinarySearchTree {
         if (left != null && left.data >= root.data) return false;
         if (right != null && right.data <= root.data) return false;
         return checkBST_T(left) && checkBST_T(right);
-    }
+    }*/
 
 
     /*boolean checkBST(Node root) {
@@ -49,4 +44,9 @@ public class TreesIsThisABinarySearchTree {
                 checkBST(root.right, root.data+1, max);
     }*/
 
+    public static void main(String[] args) {
+        Node node = new Node(1);
+        boolean bst = checkBST(node);
+        System.out.println("bst = " + bst);
+    }
 }

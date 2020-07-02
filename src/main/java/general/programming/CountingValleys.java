@@ -5,7 +5,7 @@ public class CountingValleys {
         String s = "UDDDUDUU";
         int l = s.length();
         int level = 0;
-        int prev_level = 0;
+        int prev_level;
         int vc = 0;
         for (int i=0; i<l; i++) {
             char c = s.charAt(i);

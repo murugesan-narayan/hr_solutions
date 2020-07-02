@@ -3,15 +3,15 @@ package thirtydays;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Day10BinaryNumbers {
-    public static void main1(String[] args) {
+/*    public static void main1(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         in.close();
-        int r = n, counter = 0, maxOne = 0;
-        String s = "";
+        int r, counter = 0, maxOne = 0;
+        StringBuilder s = new StringBuilder();
         while (n > 0) {
             System.out.println("n = " + n);
             r = n % 2;
@@ -24,13 +24,14 @@ public class Day10BinaryNumbers {
             } else {
                 counter = 0;
             }
-            s = r + s;
+            s.insert(0, r);
             n = n / 2;
 
         }
         System.out.println(maxOne);
+        System.out.println(s);
 
-    }
+    }*/
 
     public static void main(String[] args) {
         String bStr = Integer.toBinaryString(439);

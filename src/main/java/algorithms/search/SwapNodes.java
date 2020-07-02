@@ -1,6 +1,7 @@
 package algorithms.search;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class SwapNodes {
@@ -8,7 +9,8 @@ public class SwapNodes {
     public static void main(String[] args) {
         int[][] indexes = new int[][]{ {2, 3}, {-1, -1}, {-1, -1} };
         int[] queries = new int[]{1, 1};
-        swapNodes(indexes, queries);
+        int[][] result = swapNodes(indexes, queries);
+        System.out.println("result = " + Arrays.toString(result));
     }
 
     static int[][] swapNodes(int[][] indexes, int[] queries) {

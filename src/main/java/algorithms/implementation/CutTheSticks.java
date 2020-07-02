@@ -8,7 +8,6 @@ public class CutTheSticks {
     static int[] cutTheSticks(int[] arr) {
         Arrays.sort(arr);
         List<Integer> result = new ArrayList<>();
-        int i = 0;
         while (arr.length > 0) {
             result.add(arr.length);
             int minVal = arr[0];

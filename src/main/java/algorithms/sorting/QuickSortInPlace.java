@@ -6,7 +6,7 @@ public class QuickSortInPlace {
         sort(arr, 0, arr.length-1);
     }
 
-    static void sort(int arr[], int low, int high) {
+    static void sort(int[] arr, int low, int high) {
         if (low < high) {
             /* pi is partitioning index, arr[pi] is
               now at right place */
@@ -19,7 +19,7 @@ public class QuickSortInPlace {
         }
     }
 
-    static int partition1(int arr[], int low, int high) {
+    static int partition1(int[] arr, int low, int high) {
         int pivot = arr[high];
         int i = (low-1); // index of smaller element
         for (int j=low; j<high; j++)
@@ -44,10 +44,8 @@ public class QuickSortInPlace {
         return i+1;
     }
 
-    static void printArray(int arr[]) {
-        int n = arr.length;
-        for (int i=0; i<n; ++i)
-            System.out.print(arr[i]+" ");
+    static void printArray(int[] arr) {
+        for (int value : arr) System.out.print(value + " ");
         System.out.println();
     }
 
