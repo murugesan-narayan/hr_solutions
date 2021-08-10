@@ -1,1 +1,1 @@
-# hr_solutions
+# HackerRank Solutions
